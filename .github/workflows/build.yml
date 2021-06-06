@@ -34,7 +34,9 @@ jobs:
         wget -nv -c https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
         ./build.sh
         chmod +x "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage"
-
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Built Project
     - name: Create Release
       uses: ncipollo/release-action@v1
       with:
