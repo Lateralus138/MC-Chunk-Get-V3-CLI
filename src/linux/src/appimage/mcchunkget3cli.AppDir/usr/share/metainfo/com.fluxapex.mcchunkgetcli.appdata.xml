@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="console-application">
-	<id>com.fluxapex.mcchunkget3cli</id>
+	<id>com.fluxapex.mcchunkgetcli</id>
 	<metadata_license>FSFAP</metadata_license>
 	<project_license>LGPL-3.0</project_license>
 	<name>MC Chunk Get V3 - CLI Edition</name>
@@ -8,7 +8,7 @@
 	<description>
 		<p>Command line utility to get the boundary coordinates of a chunk in Minecraft. Written in Rust.</p>
 	</description>
-	<launchable type="desktop-id">mcchunkget3cli.desktop</launchable>
+	<launchable type="desktop-id">mcchunkgetcli.desktop</launchable>
 	<url type="homepage">https://github.com/Lateralus138/MC-Chunk-Get-V3-CLI</url>
 	<screenshots>
 		<screenshot type="default">
@@ -25,7 +25,7 @@
 		</screenshot>
 	</screenshots>
 	<provides>
-		<id>mcchunkget3cli.desktop</id>
-        <binary>mcchunkget3cli</binary>
+		<id>mcchunkgetcli.desktop</id>
+        <binary>mcchunkgetcli</binary>
 	</provides>
 </component>
