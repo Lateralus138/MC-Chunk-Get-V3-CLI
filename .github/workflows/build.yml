@@ -37,8 +37,6 @@ jobs:
 
     - name: Create Release
       uses: ncipollo/release-action@v1
-      run: |
-        chmod +x "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage"
       with:
         allowUpdates: True
         tag: Continuous
@@ -46,3 +44,6 @@ jobs:
         prerelease: True
         artifacts: "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage,src/linux/target/debug/mcchunkgetcli,src/windows/target/debug/mcchunkgetcli.exe,src/linux/target/deb/mcchunkgetcli.deb,src/linux/target/deb/mcchunkgetcli_deb_installer.sh"
         token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Set permissions
+      run: |
+        chmod +x "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage"
