@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=mcchunkget3cli
+Exec=mcchunkget3cli %F
+Icon=mcchunkget3cli
+Terminal=true
+Type=Application
+Categories=Utility;
