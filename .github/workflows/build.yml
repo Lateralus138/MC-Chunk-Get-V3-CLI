@@ -25,15 +25,15 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Set Bin Executable Command
       run: |
-        chmod +x src/linux/target/debug/mcchunkgetcli
-        chmod +x src/linux/target/deb/mcchunkgetcli_deb_installer.sh
+        chmod 0755 src/linux/target/debug/mcchunkgetcli
+        chmod 0755 src/linux/target/deb/mcchunkgetcli_deb_installer.sh
         mkdir -p src/linux/target/appimage
 
     - name: Download building tools & executing AppImage build
       run: |
         wget -nv -c https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
         ./build.sh
-        chmod +x "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage"
+        chmod 0755 "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage"
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Built Project
@@ -48,4 +48,4 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Set permissions
       run: |
-        chmod +x "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage"
+        chmod 0755 "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage"
