@@ -37,6 +37,8 @@ jobs:
 
     - name: Create Release
       uses: ncipollo/release-action@v1
+      run: |
+        chmod +x "src/linux/target/appimage/mcchunkgetcli-x86_64.AppImage"
       with:
         allowUpdates: True
         tag: Continuous
